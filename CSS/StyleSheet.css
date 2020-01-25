@@ -5,10 +5,3 @@ h2 {font-family: 'Oswald', sans-serif; color: rgb(0, 0, 0); text-align: center; 
 h3 {color: rgb(83, 192, 221) ; text-align: center;}
 p {color: rgb(83, 192, 221); text-align: center;}
 .h1 {font-family: 'Fira Sans', cursive;}
-.comments {
-text-align: center;
-font-size: 30pt;
-font-family: 'Fira Sans';
-position: absolute
-color: rgb(83, 192, 221)
-}
