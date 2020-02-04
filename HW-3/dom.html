@@ -1,13 +1,23 @@
 <html>
-    <head>
-        <title>Accessing the DOM</title>
-    </head>
-    <body>
-        <div id="changeme">Update me</div>
 
-        <script>
-        document.getElementById("changeme").innerHTML = "I have been changed";
-    </script>
-    <script src="./HW-3/script.js"></script>
-    </body>
+<head>
+    <title>Homework Week 3</title>
+    <link rel="stylesheet" href="script.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <img src="forestSplit.jpg" height="219" width="295">
+    <br>
+    <h1>Summer Afternoon Hike</h1>
+    <div id="story">
+        Ready to hike?
+    </div>
+    <br>
+
+    <button id="choice1" onclick="storyFunction(1);">Yes</button>&nbsp;
+    <button id="choice2" onclick="storyFunction(2);">No</button>
+    <button id="choice3" onclick="storyFunction(3);">Restart</button>
+</body>
+
 </html>

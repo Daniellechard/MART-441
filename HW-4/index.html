@@ -1,25 +1,22 @@
-<h2>Choose your Destiny!!!<br><br><br></h2><div id="text"><br></div>
-<div ng-app>
-  <div>
-    <form id="inp" onsubmit="Start()">
-      <label>Choose your class!<br> Archer   Knight   Wizard<br></label>
-    <input type="text" ng-model="playerClass" placeholder="Enter your class here"><br>
-        <br><label>Choose your race!<br>Human Elf Dwarf</label>
-        <br><input type="text" id="inp" ng-model="playerRace" placeholder="Enter your race here"><br>
+<html>
 
-       <br><input type="number" ng-model="playerSTR" placeholder="How Strong are you?">
-       <br><input type="number" ng-model="playerCON" placeholder="Constitutional?">
-       <br><input type="number" ng-model="playerINT" placeholder="Intelegent?">
-       <br><input type="number" ng-model="playerWIS" placeholder="Wise?">
-       <br><input type="number" ng-model="playerDEX" placeholder="Dexterous?">
-       <br><input type="number" ng-model="playerCHA" placeholder="Charismatic?">
-           <p>Enter these, no lower than 1, and your total can be no more than 40. Your total: {{playerSTR+playerCON+playerINT+playerWIS+playerDEX+playerCHA}}</p>
-           <p>You are a(n) {{playerRace}} {{playerClass}}!</p>
-           <button type="submit" class="start" title="Start playing?" onclick="dis()" >Ready to Play?</button>
-    <hr
-        </form>
-  </div>
-</div>
+<head>
+    <title>Choose your own adventure</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
 
-        <!-- USE THIS: document.getElementById("text").innerHTML = ""
-     AND THIS: alert("You lost! Don't be afraid to be adventurous!") -->
+<body>
+    <img src="pug.jpg" height="219" width="295">
+    <br>
+    <h1>Story of the Ages</h1>
+    <div id="story">
+        Our fearless leader, "Pugster" has entered the dog park for the first time. Scared? Yes, but willing to give it a try. Are you ready to start on adventure with Pugster?
+    </div>
+    <br>
+
+    <button id="choice1" onclick="storyFunction(1);">Yes</button>&nbsp;
+    <button id="choice2" onclick="storyFunction(2);">No</button>
+</body>
+
+</html>
