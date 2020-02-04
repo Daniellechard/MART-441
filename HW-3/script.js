@@ -1,6 +1,7 @@
 function storyFunction(choice) {
     var answer1 = document.getElementById("choice1").innerHTML;
     var answer2 = document.getElementById("choice2").innerHTML;
+
     if (choice == 1 && answer1 == "Yes") {
         document.getElementById("story").innerHTML = "You are hiking in the forest by yourself when you come upon a split in the path.";
         document.getElementById("choice1").innerHTML = "Go left" ;
