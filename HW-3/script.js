@@ -1,12 +1,10 @@
 function storyFunction(choice) {
     var answer1 = document.getElementById("choice1").innerHTML;
     var answer2 = document.getElementById("choice2").innerHTML;
-    var answer3 = document.getElementById("choice3").innerHTML;
-    if (choice == 1 && answer1 == "Yes" || answer3 == 'Restart' {
+    if (choice == 1 && answer1 == "Yes") {
         document.getElementById("story").innerHTML = "You are hiking in the forest by yourself when you come upon a split in the path.";
-        document.getElementById("choice1").innerHTML = "Go left";
+        document.getElementById("choice1").innerHTML = "Go left" ;
         document.getElementById("choice2").innerHTML = "Go right";
-        document.getElementById("choice3").innerHTML = 'Restart'
     } else if (choice == 2 && answer2 == "No") {
         document.getElementById("story").innerHTML = "Oh come on, it's a beautiful day!";
         document.getElementById("choice1").innerHTML = "Go left";
@@ -76,14 +74,15 @@ function storyFunction(choice) {
         document.getElementById("choice1").innerHTML = "Sit down and enjoy the view";
         document.getElementById("choice2").innerHTML = "Snap a selfie";
     }else if (choice == 1 && answer1 == "Lay down and play dead") {
-        document.getElementById("story").innerHTML = "You quickly curl into a ball and pretend to be dead. Mama bear walks up, sniffs and paws at you but grows disinterested when she sees no reaction and walks away with her cubs in tow";
-        document.getElementById("choice1").innerHTML = "Wait for a few minutes to make sure they are gone";
-        document.getElementById("choice2").innerHTML = "Run back to your car as fast as possible";
-    }else if (choice == 2 && answer2 == "Run back to your car as fast as possible") {
-        document.getElementById("story").innerHTML = "The water is refreshing and you bask in the coolness of the lake" ;
-        document.getElementById("choice1").innerHTML = "Explore the lake";
-        document.getElementById("choice2").innerHTML = "Get out and dry off";
-
+        document.getElementById("story").innerHTML = "You quickly curl into a ball and pretend to be dead. Mama bear walks up, sniffs and paws at you but grows disinterested when she sees no reaction and walks away with her cubs in tow"+ "<br>Restart?";
+        document.getElementById("choice1").innerHTML = "Yes restart";
+        document.getElementById("choice2").innerHTML = "No quit";
+    }else if (choice == 2 && answer2 == "No quit") {
+      document.getElementById("story").innerHTML = "Thanks for playing";
+    }else if (choice == 1 && answer1 == "Yes restart") {
+      document.getElementById("story").innerHTML = "You are hiking in the forest by yourself when you come upon a split in the path.";
+      document.getElementById("choice1").innerHTML = "Go left" ;
+      document.getElementById("choice2").innerHTML = "Go right";
     }
 
 
