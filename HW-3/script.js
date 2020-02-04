@@ -5,6 +5,7 @@ function storyFunction(choice) {
         document.getElementById("story").innerHTML = "You are hiking in the forest by yourself when you come upon a split in the path.";
         document.getElementById("choice1").innerHTML = "Go left" ;
         document.getElementById("choice2").innerHTML = "Go right";
+
     } else if (choice == 2 && answer2 == "No") {
         document.getElementById("story").innerHTML = "Oh come on, it's a beautiful day!";
         document.getElementById("choice1").innerHTML = "Go left";
@@ -13,6 +14,7 @@ function storyFunction(choice) {
         document.getElementById("story").innerHTML = "Oh no! You spot a mama grizzly bear and her cubs grazing on huckleberry bushes a few feet away as you come around the corner of a large boulder.";
         document.getElementById("choice1").innerHTML = "Back away slowly";
         document.getElementById("choice2").innerHTML = "Scare them away with loud noises";
+        document.getElementById("image").innerHTML= <img src="mamaGrizCubs.jpg" height="219" width="295">
     } else if (choice == 2 && answer2 == "Go right") {
         document.getElementById("story").innerHTML = "The path looks clear and you hike to a lake you spot in the distance.";
         document.getElementById("choice1").innerHTML = "Take a dip";
