@@ -7,16 +7,26 @@
    }
   </style>
 <script>
-    function getChoice1(){
+    function getChoice1()
+    {
       var myChoice = document.getElementById('choice').value
       var myQuestion = document.getElementById('question');
-      if(myChoice === 'left'){
+      if(myChoice === 'left')
+      {
+        document.getElementById('choice').style.display='none';
+        document.getElementById('btnSubmit').style.display='none';
+
+        document.getElementById('choice2').style.display='block';
+        document.getElementById('btnSubmit2').style.display='block';
+
         myQuestion.innerHTML = 'Oh no! You spot a mama grizzly bear and her cubs grazing on huckleberry bushes a few feet away as you come around the corner of a large boulder. Do you back away slowly or scare them away with loud noises?';
       }
-      else if(myChoice === 'right'){
+      else if(myChoice === 'right')
+      {
           myQuestion.innerHTML = 'The path looks clear and you hike to a lake you spot in the distance. Do you take a dip or go fishing?';
       }
-      else {
+      else
+      {
         myQuestion.innerHTML = 'Invalid answer';
       }
     }
