@@ -16,7 +16,7 @@
         document.getElementById('choice').style.display='none';
         document.getElementById('btnSubmit').style.display='none';
 
-        document.getElementById('choice2').style.display='block';
+        document.getElementById('choice2 ').style.display='block';
         document.getElementById('btnSubmit2').style.display='block';
 
         myQuestion.innerHTML = 'Oh no! You spot a mama grizzly bear and her cubs grazing on huckleberry bushes a few feet away as you come around the corner of a large boulder. Do you back away slowly or scare them away with loud noises?';
@@ -28,6 +28,22 @@
       else
       {
         myQuestion.innerHTML = 'Invalid answer';
+      }
+      function getChoice2(){
+        var grizzly = document.getElementById('choice2').value;
+          var myQuestion = document.getElementById('question');
+        if(grizzly === 'back away')
+        {
+          myQuestion.innerHTML = 'You manage to back away before they notice you.'
+        }
+        else if(grizzly === 'loud noises')
+        {
+          myQuestion.innerHTML = 'The mama bear goes into protective mode and rears up on her hind legs as she roars'
+        }
+        else
+        {
+          myQuestion.innerHTML = 'Invalid answer';
+        }
       }
     }
 </script>
