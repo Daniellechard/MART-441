@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Homework Week 3</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script>
+    function getChoice1()
+    {
+        var myChoice = document.getElementById("choice").value;
+        var myQuestion = document.getElementById("question");
+        if(myChoice === "left")
+        {
+            document.getElementById("choice").style.display="none";
+            document.getElementById("btnSubmit").style.display="none";
+
+            document.getElementById("choice2").style.display="block";
+            document.getElementById("btnSubmit2").style.display="block";
+
+
+            myQuestion.innerHTML = "Oh no! You spot a mama grizzly bear and her cubs grazing on huckleberry bushes a few feet away as you come around the corner of a large boulder. Do you back away slowly or scare them away with loud noises?";
+        }
+        else if(myChoice === "right")
+        {
+            myQuestion.innerHTML = "The path looks clear and you hike to a lake you spot in the distance. Do you take a dip or go fishing?";
+
+        }
+        else
+        {
+            myQuestion.innerHTML = "Invalid answer";
+        }
+
+    }
+    function getChoice2()
+    {
+        var right = document.getElementById("choice2").value;
+        var myQuestion = document.getElementById("question");
+        if(right === "take a dip")
+        {
+            document.getElementById("mainImage").src = "lakeShore.jpg"
+            myQuestion.innerHTML = "I love tacos on Tuesdays!";
+        }
+        else if(right === "fishing")
+        {
+          document.getElementById("mainImage").src = "fishingPov.jpg"
+            myQuestion.innerHTML = "I love nachos, but nachos do not love me.";
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <img src="images/forestSplit.jpg" height="180" width="280" id='mainImage'>
+    <br>
+    <div id=='question'>
+    <h2>Summer Afternoon Hike</h2>
+     <br>
+     You are hiking in the forest by yourself when you come upon a split in the path. Do you go left or right?
+    <br>
+    <input type='text' size='30' id='choice' value='Please enter left or right'>
+    <button id='btnSubmmit' onclick='getChoice1()'>Click to continue</button>
+
+</div>
+    <br>
+
+
+
+</body>
+
+</html>
