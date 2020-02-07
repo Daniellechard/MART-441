@@ -7,6 +7,7 @@
    }
   </style>
 <script>
+//Split
     function getChoice1()
     {
       var myChoice = document.getElementById('choice').value
@@ -24,13 +25,15 @@
       }
       else if(myChoice == 'right')
       {
+
           myQuestion.innerHTML = 'The path looks clear and you hike to a lake you spot in the distance. Do you take a dip or go fishing?';
       }
       else
       {
         myQuestion.innerHTML = 'Invalid answer';
       }
-    }
+}
+//Left
       function getChoice2()
       {
         var grizzly = document.getElementById('choice2').value;
@@ -45,6 +48,34 @@
           myQuestion.innerHTML = 'The mama bear goes into protective mode and rears up on her hind legs as she roars. Do you lay down and play dead or run away as fast as you can?'
         }
       }
+
+//Right
+      function getChoice3()
+{
+  var lake = document.getElementById('choice3').value;
+  var myQuestion = document.getElementById('question');
+  if(lake == 'take a dip')
+  {
+
+    document.getElementById('choice').style.display='none';
+    document.getElementById('btnSubmit').style.display='none';
+
+    document.getElementById('choice2').style.display='none';
+    document.getElementById('btnSubmit2').style.display='none';
+//this won't show up and idk why
+    document.getElementById('choice3').style.display='block';
+    document.getElementById('btnSubmit3').style.display='block';
+//also the picture just goes back to the forest path instead of the lake picture.
+    document.getElementById('mainImage').src = 'images/lakeShore.jpg'
+    myQuestion.innerHTML = 'The water is refreshing and you bask in the coolness of the lake. Do you explore the lake or get out and dry off?'
+
+  }
+  else if(lake == 'go fishing')
+  {
+    myQuestion.innerHTML = 'You grab your fishing gear from your backpack and try your hand at fishing. Before long you have caught a medium sized silver looking fish. Do you cook it and eat it or release it back into the lake?'
+  }
+}
+
 
 </script>
 <body>
@@ -61,7 +92,7 @@
     <input type='text' size='30'  id='choice' value='Please enter left or right'>
     <button id='btnSubmit' onclick='getChoice1();'>Press to continue</button>
 
-    <input type="text" size="30" id="choice2" value="Enter favorite food." style="display:none">
+    <input type="text" size="30" id="choice2" value="Please enter back away or loud noises." style="display:none">
     <button id="btnSubmit2" onclick="getChoice2();"  style="display:none">Click to continue</button>
 
     <input type='text' size='30'  id='choice3' value='Please enter take a dip or go fishing' style='display:none'>
