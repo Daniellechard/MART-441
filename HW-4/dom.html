@@ -31,6 +31,20 @@
         myQuestion.innerHTML = 'Invalid answer';
       }
     }
+      function getChoice2()
+      {
+        var grizzly = document.getElementById('choice2').value;
+        var myQuestion = document.getElementById('question');
+        if(grizzly == 'back away')
+        {
+          myQuestion.innerHTML = 'You manage to back away before they notice you. Do you continue hiking down a different path or go back to your car?'
+        }
+        else if(grizzly == 'loud noises')
+        {
+          myQuestion.innerHTML = 'The mama bear goes into protective mode and rears up on her hind legs as she roars. Do you lay down and play dead or run away as fast as you can?'
+        }
+      }
+
 </script>
 <body>
     <img src="images/forestSplit.jpg" height="180" width="280">
@@ -46,8 +60,8 @@
     <input type='text' size='30'  id='choice' value='Please enter left or right'>
     <button id='btnSubmit' onclick='getChoice1();'>Press to continue</button>
 
-    <input type='text' size='30'  id='choice2' value='Please enter back away or loud noises' style='display:none'>
-    <button id='btnSubmit2' onclick='getChoice2();' style='display:none' >Press to continue</button>
+    <input type="text" size="30" id="choice2" value="Enter favorite food." style="display:none">
+    <button id="btnSubmit2" onclick="getChoice2();"  style="display:none">Click to continue</button>
 
     <input type='text' size='30'  id='choice3' value='Please enter take a dip or go fishing' style='display:none'>
     <button id='btnSubmit3' onclick='getChoice3();' style='display:none' >Press to continue</button>
