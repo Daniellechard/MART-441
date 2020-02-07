@@ -25,13 +25,17 @@
       }
       else if(myChoice == 'right')
       {
-
+          document.getElementById('mainImage').src = 'images/lakeShore.jpg'
+          document.getElementById('choice3').style.display = 'block';
+          document.getElementById('btnSubmit3').style.display = 'block';
           myQuestion.innerHTML = 'The path looks clear and you hike to a lake you spot in the distance. Do you take a dip or go fishing?';
       }
       else
       {
         myQuestion.innerHTML = 'Invalid answer';
       }
+      document.getElementById('choice').style.display = 'none';
+      document.getElementById('btnSubmit').style.display = 'none'
 }
 //Left
       function getChoice2()
@@ -47,6 +51,8 @@
         {
           myQuestion.innerHTML = 'The mama bear goes into protective mode and rears up on her hind legs as she roars. Do you lay down and play dead or run away as fast as you can?'
         }
+        document.getElementById('choice2').style.display = 'none';
+        document.getElementById('btnSubmit2').style.display = 'none';
       }
 
 //Right
@@ -57,16 +63,7 @@
   if(lake == 'take a dip')
   {
 
-    document.getElementById('choice').style.display='none';
-    document.getElementById('btnSubmit').style.display='none';
 
-    document.getElementById('choice2').style.display='none';
-    document.getElementById('btnSubmit2').style.display='none';
-//this won't show up and idk why
-    document.getElementById('choice3').style.display='block';
-    document.getElementById('btnSubmit3').style.display='block';
-//also the picture just goes back to the forest path instead of the lake picture.
-    document.getElementById('mainImage').src = 'images/lakeShore.jpg'
     myQuestion.innerHTML = 'The water is refreshing and you bask in the coolness of the lake. Do you explore the lake or get out and dry off?'
 
   }
