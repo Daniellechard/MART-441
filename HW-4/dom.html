@@ -19,7 +19,7 @@
         document.getElementById('choice2').style.display='block';
         document.getElementById('btnSubmit2').style.display='block';
 
-
+        document.getElementById('mainImage').src = 'images/mamaGrizCubs.jpg'
         myQuestion.innerHTML = 'Oh no! You spot a mama grizzly bear and her cubs grazing on huckleberry bushes a few feet away as you come around the corner of a large boulder. Do you back away slowly or scare them away with loud noises?';
       }
       else if(myChoice == 'right')
@@ -37,6 +37,7 @@
         var myQuestion = document.getElementById('question');
         if(grizzly == 'back away')
         {
+
           myQuestion.innerHTML = 'You manage to back away before they notice you. Do you continue hiking down a different path or go back to your car?'
         }
         else if(grizzly == 'loud noises')
@@ -47,7 +48,7 @@
 
 </script>
 <body>
-    <img src="images/forestSplit.jpg" height="180" width="280">
+    <img src="images/forestSplit.jpg" height="180" width="280" id='mainImage'>
 
     <div id='question'>
     <br>
