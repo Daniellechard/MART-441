@@ -97,16 +97,48 @@ function getChoice4()
   var myQuestion = document.getElementById('question');
   if(direction == 'continue hiking')
   {
+    document.getElementById('choice9').style.display = 'block';
+    document.getElementById('btnSubmit9').style.display = 'block';
+
     document.getElementById('mainImage').src = 'images/lakeView.jpg'
     myQuestion.innerHTML = 'You redirect to a trail in the opposite direction of the bears and make it to the top of the mountain. Do you sit down and soak up the view or snap a selfie?'
   }
   else if(direction == 'go back')
   {
+    document.getElementById('choice8').style.display = 'block';
+    document.getElementById('btnSubmit8').style.display = 'block';
+
     document.getElementById('mainImage').src = 'images/parkedCar.jpg'
-    myQuestion.innerHTML = 'You make it back down to your car. Do you go home or grab a bite to eat?'
+    myQuestion.innerHTML = 'You make it back down to your car. Do you <b>go home</b> or <b>grab a bite</b> to eat?'
   }
   document.getElementById('choice4').style.display = 'none';
   document.getElementById('btnSubmit4').style.display = 'none';
+}
+
+//Split/Left/Back Away/Sit Down
+//can't get this function to show up after typing sit down
+function getChoice9()
+{
+  var action = document.getElementById('choice5').value;
+  var myQuestion = document.getElementById('question');
+  if(action == 'sit down')
+  {
+    document.getElementById('choice10').style.display = 'block';
+    document.getElementById('btnSubmit10').style.display = 'block';
+
+    document.getElementById('mainImage').src = 'images/lakeSunset.jpg'
+    myQuestion.innerHTML = 'You soak up the moment and add the view of the sunset to your memory bank'
+  }
+  else if(direction == 'snap a selfie')
+  {
+    //document.getElementById('choice11').style.display = 'block';
+    //document.getElementById('btnSubmit11').style.display = 'block';
+
+    document.getElementById('mainImage').src = 'images/parkedCar.jpg'
+    myQuestion.innerHTML = 'As you try to find your best angle you step on some loose rocks on the cliff edge and fall down the steep precipice. You died.'
+  }
+  document.getElementById('choice5').style.display = 'none';
+  document.getElementById('btnSubmit5').style.display = 'none';
 }
 
 
@@ -142,6 +174,18 @@ function getChoice4()
 
     <input type='text' size='30'  id='choice7' value='Please enter eat it or release it' style='display:none'>
     <button id='btnSubmit7' onclick='getChoice7();' style='display:none' >Press to continue</button>
+
+    <input type='text' size='30'  id='choice8' value='Please enter go home or grab a bite' style='display:none'>
+    <button id='btnSubmit8' onclick='getChoice8();' style='display:none' >Press to continue</button>
+
+    <input type='text' size='30'  id='choice9' value='Please enter sit down or snap a selfie' style='display:none'>
+    <button id='btnSubmit9' onclick='getChoice9();' style='display:none' >Press to continue</button>
+
+    <input type='text' size='30'  id='choice10' value='You have reached the end' style='display:none'>
+    <button id='btnSubmit10' onclick='getChoice1();' style='display:none' >Press to restart</button>
+
+
+
 
 
 
