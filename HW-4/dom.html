@@ -25,9 +25,12 @@
       }
       else if(myChoice == 'right')
       {
-          document.getElementById('mainImage').src = 'images/lakeShore.jpg'
+
           document.getElementById('choice3').style.display = 'block';
           document.getElementById('btnSubmit3').style.display = 'block';
+
+          document.getElementById('mainImage').src = 'images/lakeShore.jpg'
+
           myQuestion.innerHTML = 'The path looks clear and you hike to a lake you spot in the distance. Do you take a dip or go fishing?';
       }
       else
@@ -37,26 +40,33 @@
       document.getElementById('choice').style.display = 'none';
       document.getElementById('btnSubmit').style.display = 'none'
 }
-//Left
-      function getChoice2()
+//Split/Left
+      function getChoice2()//Choice 2==left
       {
         var grizzly = document.getElementById('choice2').value;
         var myQuestion = document.getElementById('question');
         if(grizzly == 'back away')
         {
+          document.getElementById('choice4').style.display = 'block';
+          document.getElementById('btnSubmit4').style.display = 'block';
 
+          document.getElementById('mainImage').src = 'images/backAway.jpg'
           myQuestion.innerHTML = 'You manage to back away before they notice you. Do you continue hiking down a different path or go back to your car?'
         }
         else if(grizzly == 'loud noises')
         {
+          document.getElementById('choice5').style.display = 'block';
+          document.getElementById('btnSubmit5').style.display = 'block';
+
+          document.getElementById('mainImage').src = 'images/bearRoar.jpg'
           myQuestion.innerHTML = 'The mama bear goes into protective mode and rears up on her hind legs as she roars. Do you lay down and play dead or run away as fast as you can?'
         }
         document.getElementById('choice2').style.display = 'none';
         document.getElementById('btnSubmit2').style.display = 'none';
       }
 
-//Right
-      function getChoice3()
+//Split/Right
+      function getChoice3()//choice 3=Right
 {
   var lake = document.getElementById('choice3').value;
   var myQuestion = document.getElementById('question');
@@ -64,13 +74,35 @@
   {
 
 
+    document.getElementById('mainImage').src = 'images/lakeBasking.jpg'
     myQuestion.innerHTML = 'The water is refreshing and you bask in the coolness of the lake. Do you explore the lake or get out and dry off?'
-
   }
   else if(lake == 'go fishing')
   {
+    document.getElementById('mainImage').src = 'images/fishingPov.jpg'
     myQuestion.innerHTML = 'You grab your fishing gear from your backpack and try your hand at fishing. Before long you have caught a medium sized silver looking fish. Do you cook it and eat it or release it back into the lake?'
   }
+  document.getElementById('choice3').style.display = 'none';
+  document.getElementById('btnSubmit3').style.display = 'none';
+}
+
+//Split/Left/Back Away
+function getChoice4()
+{
+  var direction = document.getElementById('choice4').value;
+  var myQuestion = document.getElementById('question');
+  if(direction == 'continue hiking')
+  {
+    document.getElementById('mainImage').src = 'images/lakeView.jpg'
+    myQuestion.innerHTML = 'You redirect to a trail in the opposite direction of the bears and make it to the top of the mountain. Do you sit down and soak up the view or snap a selfie?'
+  }
+  else if(direction == 'go back to car')
+  {
+    document.getElementById('mainImage').src = 'images/parkedCar.jpg'
+    myQuestion.innerHTML = 'You make it back down to your car. Do you go home or grab a bite to eat?'
+  }
+  document.getElementById('choice4').style.display = 'none';
+  document.getElementById('btnSubmit4').style.display = 'none';
 }
 
 
@@ -90,10 +122,21 @@
     <button id='btnSubmit' onclick='getChoice1();'>Press to continue</button>
 
     <input type="text" size="30" id="choice2" value="Please enter back away or loud noises." style="display:none">
-    <button id="btnSubmit2" onclick="getChoice2();"  style="display:none">Click to continue</button>
+    <button id="btnSubmit2" onclick="getChoice2();"  style="display:none">Press to continue</button>
 
     <input type='text' size='30'  id='choice3' value='Please enter take a dip or go fishing' style='display:none'>
     <button id='btnSubmit3' onclick='getChoice3();' style='display:none' >Press to continue</button>
+
+    <input type='text' size='30'  id='choice4' value='Please enter continue hiking or go back to car' style='display:none'>
+    <button id='btnSubmit4' onclick='getChoice4();' style='display:none' >Press to continue</button>
+
+    <input type='text' size='30'  id='choice5' value='Please enter play dead or run away' style='display:none'>
+    <button id='btnSubmit5' onclick='getChoice5();' style='display:none' >Press to continue</button>
+
+
+
+
+
 </body>
 
 </html>
