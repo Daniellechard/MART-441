@@ -101,7 +101,7 @@ function getChoice4()
     document.getElementById('btnSubmit9').style.display = 'block';
 
     document.getElementById('mainImage').src = 'images/lakeView.jpg'
-    myQuestion.innerHTML = 'You redirect to a trail in the opposite direction of the bears and make it to the top of the mountain. Do you sit down and soak up the view or snap a selfie?'
+    myQuestion.innerHTML = 'You redirect to a trail in the opposite direction of the bears and make it to the top of the mountain. Do you <b>sit down</b> and soak up the view or <b>snap a selfie</b>?'
   }
   else if(direction == 'go back')
   {
@@ -119,7 +119,7 @@ function getChoice4()
 //can't get this function to show up after typing sit down
 function getChoice9()
 {
-  var action = document.getElementById('choice5').value;
+  var action = document.getElementById('choice9').value;
   var myQuestion = document.getElementById('question');
   if(action == 'sit down')
   {
@@ -137,9 +137,11 @@ function getChoice9()
     document.getElementById('mainImage').src = 'images/parkedCar.jpg'
     myQuestion.innerHTML = 'As you try to find your best angle you step on some loose rocks on the cliff edge and fall down the steep precipice. You died.'
   }
-  document.getElementById('choice5').style.display = 'none';
-  document.getElementById('btnSubmit5').style.display = 'none';
+  document.getElementById('choice9').style.display = 'none';
+  document.getElementById('btnSubmit9').style.display = 'none';
 }
+
+
 
 
 </script>
@@ -178,8 +180,8 @@ function getChoice9()
     <input type='text' size='30'  id='choice8' value='Please enter go home or grab a bite' style='display:none'>
     <button id='btnSubmit8' onclick='getChoice8();' style='display:none' >Press to continue</button>
 
-    <input type='text' size='30'  id='choice9' value='Please enter sit down or snap a selfie' style='display:none'>
-    <button id='btnSubmit9' onclick='getChoice9();' style='display:none' >Press to continue</button>
+    <input type='text' size='30'  id='choice9' value='You have reached the end' style='display:none'>
+    <button id='btnSubmit9' onclick='getChoice1();' style='display:none' >Press to continue</button>
 
     <input type='text' size='30'  id='choice10' value='You have reached the end' style='display:none'>
     <button id='btnSubmit10' onclick='getChoice1();' style='display:none' >Press to restart</button>
