@@ -141,28 +141,28 @@ function getChoice9()
   document.getElementById('btnSubmit9').style.display = 'none';
 }
 
-function getChoice10()
+function getChoice9()
 {
-  var drive = document.getElementById('choice10').value;
+  var action = document.getElementById('choice9').value;
   var myQuestion = document.getElementById('question');
-  if(drive == 'go home')
+  if(action == 'sit down')
   {
     document.getElementById('choiceEnd').style.display = 'block';
     document.getElementById('btnSubmitEnd').style.display = 'block';
 
-    document.getElementById('mainImage').src = 'images/drivingPov.jpg'
-    myQuestion.innerHTML = 'After that close call you are ready to head back to the comforts of home'
+    document.getElementById('mainImage').src = 'images/lakeSunset.jpg'
+    myQuestion.innerHTML = 'You soak up the moment and add the view of the sunset to your memory bank'
   }
-  else if(action == 'grab a bite')
+  else if(action == 'snap a selfie')
   {
     document.getElementById('choiceEnd').style.display = 'block';
     document.getElementById('btnSubmitEnd').style.display = 'block';
 
-    document.getElementById('mainImage').src = 'images/drivingPov.jpg'
-    myQuestion.innerHTML = 'You head into town to grab a bite with friends and share your close encounter'
+    document.getElementById('mainImage').src = 'images/lakeView.jpg'
+    myQuestion.innerHTML = 'As you try to find your best angle you step on some loose rocks on the cliff edge and fall down the steep precipice. You died.'
   }
-  document.getElementById('choice10').style.display = 'none';
-  document.getElementById('btnSubmit10').style.display = 'none';
+  document.getElementById('choice9').style.display = 'none';
+  document.getElementById('btnSubmit9').style.display = 'none';
 }
 
 
@@ -206,11 +206,8 @@ function getChoice10()
     <input type='text' size='30'  id='choice9' value='Please enter sit down or snap a selfie' style='display:none'>
     <button id='btnSubmit9' onclick='getChoice9();' style='display:none' >Press to continue</button>
 
-    <input type='text' size='30'  id='choice10' value='Please enter sit down or snap a selfie' style='display:none'>
-    <button id='btnSubmit10' onclick='getChoice10();' style='display:none' >Press to continue</button>
-
     <input type='text' size='30'  id='choiceEnd' value='You have reached the end' style='display:none'>
-    <button id='btnSubmitEnd' onclick='getChoice1();' style='display:none' >Press to restart</button>
+    <button id='btnSubmitEnd' onclick='getChoiceEnd();' style='display:none' >Press to restart</button>
 
 
 
