@@ -115,24 +115,23 @@ function getChoice4()
   document.getElementById('btnSubmit4').style.display = 'none';
 }
 
-//Split/Left/Back Away/Mountain Top
-//can't get this function to show up after typing sit down
+//Split/Left/Back Away/Continue Hiking
 function getChoice9()
 {
   var action = document.getElementById('choice9').value;
   var myQuestion = document.getElementById('question');
   if(action == 'sit down')
   {
-    document.getElementById('choiceEnd').style.display = 'block';
-    document.getElementById('btnSubmitEnd').style.display = 'block';
+    document.getElementById('choiceRestart').style.display = 'block';
+    document.getElementById('btnSubmitRestart').style.display = 'block';
 
     document.getElementById('mainImage').src = 'images/lakeSunset.jpg'
     myQuestion.innerHTML = 'You soak up the moment and add the view of the sunset to your memory bank'
   }
   else if(action == 'snap a selfie')
   {
-    document.getElementById('choiceEnd').style.display = 'block';
-    document.getElementById('btnSubmitEnd').style.display = 'block';
+    document.getElementById('choiceRestart').style.display = 'block';
+    document.getElementById('btnSubmitRestart').style.display = 'block';
 
     document.getElementById('mainImage').src = 'images/lakeView.jpg'
     myQuestion.innerHTML = 'As you try to find your best angle you step on some loose rocks on the cliff edge and fall down the steep precipice. You died.'
@@ -141,30 +140,40 @@ function getChoice9()
   document.getElementById('btnSubmit9').style.display = 'none';
 }
 
-function getChoice9()
+function getChoiceRestart()
 {
-  var action = document.getElementById('choice9').value;
-  var myQuestion = document.getElementById('question');
-  if(action == 'sit down')
+  var myChoice = document.getElementById('choice').value
+  var myQuestionRestart = document.getElementById('ChoiceRestartQuestion');
+   var image = document.getElementById('mainImage').src = 'images/forestSplit.jpg'
+  if(myChoice == 'left')
   {
-    document.getElementById('choiceEnd').style.display = 'block';
-    document.getElementById('btnSubmitEnd').style.display = 'block';
+    document.getElementById('choiceRestart').style.display='none';
+    document.getElementById('btnSubmitRestart').style.display='none';
 
-    document.getElementById('mainImage').src = 'images/lakeSunset.jpg'
-    myQuestion.innerHTML = 'You soak up the moment and add the view of the sunset to your memory bank'
+    document.getElementById('choice2').style.display='block';
+    document.getElementById('btnSubmit2').style.display='block';
+
+    document.getElementById('mainImage').src = 'images/mamaGrizCubs.jpg'
+    myQuestionRestart.innerHTML = 'Oh no! You spot a mama grizzly bear and her cubs grazing on huckleberry bushes a few feet away as you come around the corner of a large boulder. Do you <b>back away slowly</b> or scare them away with <b>loud noises</b>?';
+console.log('uh oh')
   }
-  else if(action == 'snap a selfie')
+  else if(myChoice == 'right')
   {
-    document.getElementById('choiceEnd').style.display = 'block';
-    document.getElementById('btnSubmitEnd').style.display = 'block';
 
-    document.getElementById('mainImage').src = 'images/lakeView.jpg'
-    myQuestion.innerHTML = 'As you try to find your best angle you step on some loose rocks on the cliff edge and fall down the steep precipice. You died.'
+      document.getElementById('choice3').style.display = 'block';
+      document.getElementById('btnSubmit3').style.display = 'block';
+
+      document.getElementById('mainImage').src = 'images/lakeShore.jpg'
+
+      myQuestionRestart.innerHTML = 'The path looks clear and you hike to a lake you spot in the distance. Do you <b>take a dip</b> or <b>go fishing?</b>';
   }
-  document.getElementById('choice9').style.display = 'none';
-  document.getElementById('btnSubmit9').style.display = 'none';
+  else
+  {
+    myQuestionRestart.innerHTML = 'Invalid answer';
+  }
+  document.getElementById('choice').style.display = 'none';
+  document.getElementById('btnSubmit').style.display = 'none'
 }
-
 
 
 </script>
@@ -177,6 +186,8 @@ function getChoice9()
     <br>
     You are hiking in the forest by yourself when you come upon a split in the path. Do you go left or right?
     </div>
+
+
 
     <br>
     <input type='text' size='30'  id='choice' value='Please enter left or right'>
@@ -206,9 +217,10 @@ function getChoice9()
     <input type='text' size='30'  id='choice9' value='Please enter sit down or snap a selfie' style='display:none'>
     <button id='btnSubmit9' onclick='getChoice9();' style='display:none' >Press to continue</button>
 
-    <input type='text' size='30'  id='choiceEnd' value='You have reached the end' style='display:none'>
-    <button id='btnSubmitEnd' onclick='getChoiceEnd();' style='display:none' >Press to restart</button>
+    <input type='text' size='30'  id='choiceRestart' value='You have reached the end' style='display:none'>
+    <button id='btnSubmitRestart' onclick='getChoiceRestart();' style='display:none' >Press to restart</button>
 
+    <input type='text' size'30' id='ChoiceRestartQuestion' value='You are hiking in the forest by yourself when you come upon a split in the path. Do you go left or right?' style='display:none'>
 
 
 
