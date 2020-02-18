@@ -1,4 +1,4 @@
-var pics = ["image1","image2","image3","image4", "image 5","image6", "image7", "image8", "image9", "image10"];
+var pics = ["image1","image2","image3","image4", "image5","image6", "image7", "image8", "image9", "image10"];
 
 var blankPics = "images/blank.jpg";
 
@@ -6,14 +6,16 @@ var actualPics = new Array();
 
 
 
-function printBlankPics(){
-
-  for( var i = 0; i<pics.length; i++){
+function printBlankPics()
+{
+  randomPicsArray();
+  for( var i = 0; i<pics.length; i++)
+  {
     document.getElementById(pics[i]).src = blankPics;
   }
 }
 
-function randomPics (){
+function randomPicsArray (){
   var actualPicsPath = ["images/image1.jpg", "images/image2.jpg", "images/image3.jpg", "images/image4.jpg", "images/image5.jpg"];
   var count = [0,0,0,0,0,0,0,0,0,0];
   while(actualPics.length < 10)
@@ -27,6 +29,7 @@ function randomPics (){
     }
   }
 }
-function flipPic(number){
+function flipPic(number)
+{
   document.getElementById(pics[number]).src = actualPics[number];
 }
