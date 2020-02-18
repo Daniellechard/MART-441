@@ -16,7 +16,7 @@ function printBlankPics()
 }
 
 function randomPicsArray (){
-  var actualPicsPath = ["images/image1.jpg", "images/image2.jpg", "images/image3.jpg", "images/image4.jpg", "images/image5.jpg"];
+  var actualPicsPath = ["images/bicycle.jpg", "images/desert.jpg", "images/hiker.jpg", "images/tent.jpg", "images/trees.jpg"];
   var count = [0,0,0,0,0,0,0,0,0,0];
   while(actualPics.length < 10)
   {
