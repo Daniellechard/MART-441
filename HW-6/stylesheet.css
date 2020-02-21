@@ -1,0 +1,32 @@
+body{
+  background-color:rgb(233, 182, 200);
+}
+
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color:rgb(232, 208, 223);
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: rgb(243, 207, 246);
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: rgb(255, 223, 236);
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
