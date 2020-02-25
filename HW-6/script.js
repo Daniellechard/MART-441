@@ -101,7 +101,7 @@ funtion endPage(){
 }
 
 function loadScore (){
-  document.getElementById('fNames').innerHTML = playerInfo.firstname + "" + playerInfo.lastname;
+  document.getElementById('names').innerHTML = playerInfo.firstname + "" + playerInfo.lastname;
   document.getElementById('age').innerHTML = "Age:" + playerInfo.age;
   document.getElementById("score").innerHTML = "Your Score: " + playerInfo,score;
 }
