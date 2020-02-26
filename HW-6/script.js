@@ -53,7 +53,7 @@ if (actualPics[secondNum] == actualPics[firstNum] && firstNum >= 0 && secondNum 
 {
   setTimeout(picsDissapear, 1000);
 }
-else if(actualPics[secondNum] == actualPics[firstNum] && firstNum) >= 0 && secondNum >=0)
+else if(actualPics[secondNum] == actualPics[firstNum] && firstNum >= 0 && secondNum >=0)
 {
   firstNum = -1;
   secondNum = -1;
@@ -93,7 +93,7 @@ function player()
 
 }
 
-funtion endPage(){
+function endPage(){
   playerInfo.score = attempts;
   localStorage.setItem("player", JSON.stringify(playerInfo));
   window.location = "end.html";
