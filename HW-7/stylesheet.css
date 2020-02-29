@@ -1,12 +1,12 @@
-body{
-    background-color: rgba(5, 200, 200, 0.55);
-    font-family: 'Josefin Sans',fantasy, sans-serif;
-    font-weight: 300;
-
+body
+{
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(246, 227, 180);
 }
 
 
-#Artwork {
+#Artwork
+{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -14,48 +14,57 @@ body{
     height: auto;
 }
 
-#Title {
+#Title
+{
  text-align: center;
  font-family: sans-serif;
  font-size: 60px;
- color: white;
+color: rgb(28, 41, 96);
  padding: 10px;
 }
 
-#Author {
+#Author
+{
  text-align: center;
  font-family: sans-serif;
  font-size: 30px;
- color: rgb(203, 6, 136);
+ color: rgb(28, 41, 96);
 }
 
-#Year {
+#Year
+{
+
  text-align: center;
  font-family: sans-serif;
  font-size: 30px;
- color: rgb(70, 42, 130);
+ color: rgb(28, 41, 96);
 }
 
-#Description {
+#Description
+{
+ display: inline-block;
+ padding-left: 30em;
+ padding-right: 30em;
+ padding-bottom: 1em;
  text-align: center;
  font-family: sans-serif;
  font-size: 25px;
- color: black;
- padding-right: 20px;
- padding-left: 20px;
+ color: rgb(176, 99, 50);
 }
 
-button{
-  background:black;
+button
+{
+  background:rgb(28, 41, 96);
   color:white;
   position:relative;
   height:60px;
   font-size:30px;
   padding:0 2em;
-  cursor:pointer;
+
 }
 
-.submit{
+.submit
+{
     text-align: center;
     padding: 30px;
 }
