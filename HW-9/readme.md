@@ -1,1 +1,3 @@
 https://github.com/Daniellechard/MART-441
+
+I installed the live server package like you had suggested but got the same error message. I can't really spend more time on this project at this point so I'm just going to have to turn in what I have. I may come back to it and see if I can fix it later but I haven't even had a chance to start on this weeks homework yet. I felt like I was starting to get the hang of some things but JSON really throws me off for some reason. It's also just been especially difficult to focus on homework with having an anxiety disorder and panic attacks occurring more frequently due to the pandemic that is going on right now.
