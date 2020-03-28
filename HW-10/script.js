@@ -9,9 +9,9 @@ class Box{
     }
 }
 //blue
-let box1 = new Box(700, 700, 200, 200, "rgb(20, 74, 88)");
+let box1 = new Box(400, 500, 200, 200, "rgb(20, 74, 88)");
 //green
-let box2 = new Box(700, 200, 100, 100, "rgb(155, 159, 92)");
+let box2 = new Box(100, 100, 300, 300, "rgb(155, 159, 92)");
 //orange
 let box3 = new Box(700, 200, 50, 50, "rgb(158, 65, 34)");
 
@@ -27,13 +27,13 @@ drawSquare();
 
 function update()
 {
-    box2.x -= 20;
-    if (box2.x <= 0 || box2.x >= 715) {
-        box2.x *= -20;
+    box2.x -= 5;
+    if (box2.x <= 0 || box2.x >= 750) {
+        box2.x *= -5;
     }
 
     box2.y -= 20;
-    if (box2.y <= 0 || box2.y >= 925) {
+    if (box2.y <= 0 || box2.y >= 750) {
         box2.y *= -20;
     }
 
@@ -42,20 +42,20 @@ function update()
 
 function update()
 {
-  box3.x -= 20;
-  if (box3.x <= 0 || box3.x >= 715) {
-      box3.x *= -20;
+  box3.x -= 15;
+  if (box3.x <= 0 || box3.x >= 750) {
+      box3.x *= -15;
   }
 
-  box3.y -= 20;
-  if (box3.y <= 0 || box3.y >= 925) {
-      box3.y *= -20;
+  box3.y += 15;
+  if (box3.y <= 0 || box3.y >= 750) {
+      box3.y *= +15;
   }
   drawSquare();
 }
 function drawSquare()
 {
-    ctx.clearRect(0,0,1000,750);
+    ctx.clearRect(0,0,1000,1000);
     ctx.fillStyle = box1.color;
     ctx.fillRect(box1.x, box1.y, box1.width, box1.height);
     ctx2.fillStyle = box2.color;
@@ -109,3 +109,12 @@ function getKey(event)
         {
             box1.y += 25;
         }
+
+        function hasCollided(box1, box2) {
+    return !(
+        ((box1.y + box1.height) < (box2.y)) ||
+        (box1.y > (box2.y + box2.height)) ||
+        ((box1.x + box1.width) < box2.x) ||
+        (box1.x > (box2.x + box2.width))
+    );
+}
