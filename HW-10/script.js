@@ -110,7 +110,8 @@ function getKey(event)
             box1.y += 25;
         }
 
-        function hasCollided(box1, box2) {
+        function hasCollided(box1, box2)
+        {
     return !(
         ((box1.y + box1.height) < (box2.y)) ||
         (box1.y > (box2.y + box2.height)) ||
