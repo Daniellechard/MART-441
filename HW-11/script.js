@@ -36,9 +36,9 @@ function setup()
 
 
     $.getJSON("data.json", function(data) {
-        for(var i = 0; i < data.walls.length; i++)
+        for(var i = 0; i < data.squares.length; i++)
         {
-            squareArray.push(new Square(data.walls[i].x,data.walls[i].y, data.walls[i].h, data.walls[i].w, data.walls[i].color));
+            squareArray.push(new Square(data.squares[i].x,data.squares[i].y, data.squares[i].h, data.squares[i].w, data.squares[i].color));
         }
         drawSquare();
     });
