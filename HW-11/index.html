@@ -27,21 +27,7 @@
         <div id="Title">Move the Yellow Block with "WASD" and Hit the Color Blocks to Gain More Lives for Next Sequence!</div>
         <canvas id="myCanvas" height="1000" width="1000"></canvas>
 
-        <script>
-            var previous = null;
-            var current = null;
-            setInterval(function() {
-                $.getJSON("data.json", function(json) {
-                    current = JSON.stringify(json);
-                    if (previous && current && previous !== current) {
-                        console.log('refresh');
-                        location.reload();
-                    }
-                    previous = current;
-                });
-            }, 2000);
-        </script>
-      
+        
 
     </body>
 </html>
