@@ -149,8 +149,7 @@ function drawSquare()
     ctx.fillStyle = square1.mainColor;
     ctx.fillRect(square1.x, square1.y, square1.width, square1.height);
 
-    // ctx.fillStyle = square2.mainColor;
-    // ctx.fillRect(square2.x, square2.y, square2.width, square2.height);
+
     ctx.fillStyle = stuff1.mainColor;
         ctx.fillRect(stuff1.x, stuff1.y, stuff1.width, stuff1.height);
 
@@ -171,7 +170,7 @@ function drawSquare()
     }
 
     ctx.font = "30px Arial";
-    ctx.fillText("Lives: " + lives, 10, 50);
+    ctx.fillText("Points: " + points, 10, 50);
 
 }
 
