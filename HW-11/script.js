@@ -7,7 +7,7 @@ var stuff1, stuff2, stuff3;
 var direction;
 var questions;
 var squareArray = [];
-var lives = 1;
+var points = 1;
 $(document).ready(function()
 {
 
@@ -95,7 +95,7 @@ var stuffOne = false;
     stuffOne = hasCollided(square1,stuff1);
     if(stuffOne === true)
     {
-  lives++;
+  points++;
   stuff1 = new Square(0, 0, 0,0,"rgb(71, 71, 219)");
     }
 
@@ -103,7 +103,7 @@ var stuffTwo = false;
     stuffTwo = hasCollided(square1,stuff3);
     if(stuffTwo === true)
     {
-  lives++;
+  points++;
   stuff3 = new Square(0, 0, 0,0,"rgb(50, 252, 174)");
     }
 
@@ -111,7 +111,7 @@ var stuffThree = false;
     stuffThree = hasCollided(square1,stuff2);
     if(stuffThree === true)
     {
-  lives++;
+  points++;
   stuff2 = new Square(0, 0, 0,0,"rgb(207, 17, 96)");
     }
 
@@ -174,8 +174,8 @@ function drawSquare()
         ctx.fillRect(squareArray[i].x, squareArray[i].y, squareArray[i].width, squareArray[i].height);
     }
 
-    ctx.font = "30px Arial";
-    ctx.fillText("Points: " + points, 10, 50);
+    ctx.font = "20px Arial";
+    ctx.fillText("Points: " + points, 900, 40);
 
 }
 
