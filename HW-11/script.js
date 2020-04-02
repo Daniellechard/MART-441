@@ -175,7 +175,7 @@ function drawSquare()
     }
 
     ctx.font = "20px Arial";
-    ctx.fillText("Points: " + points, 900, 40);
+    ctx.fillText("Points: " + points, 900, 975);
 
 }
 
