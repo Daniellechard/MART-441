@@ -3,7 +3,7 @@ var ctx;
 var x = 50;
 var y = 50;
 var square1;
-var stuff1, stuff2, stuff3, stuff4;
+var stuff1, stuff2, stuff3;
 var direction;
 var questions;
 var squareArray = [];
@@ -25,13 +25,16 @@ function setup()
     canvas = document.getElementById("myCanvas");
     ctx = canvas.getContext("2d");
 
-    // create two objects
-    square1 = new Square(100,100,50,50,"rgb(255, 248, 79)");
+    //blue
+    square1 = new Square(50,50,25,25,"rgb(0, 255, 232)");
 
-    stuff1 = new Square(850, 445, 20,20,"rgb(71, 71, 219)");
-	  stuff2 = new Square(700,650,20,20,"rgb(50, 252, 174)");
-    stuff3 = new Square(500,445,20,20,"rgb(207, 17, 96)");
-    stuff4 = new Square(1000, 100, 30, 30, "rgb(18, 237, 224)");
+    //pink
+    stuff1 = new Square(850, 445, 10,10,"rgb(255, 0, 199)");
+    //yellow
+	  stuff2 = new Square(700,650,10,10,"rgb(250, 255, 0)");
+    //red
+    stuff3 = new Square(500,445,10,10,"rgb(255, 0, 0)");
+
 
 
 
@@ -105,12 +108,7 @@ var stuffThree = false;
   stuff2 = new Square(0, 0, 0,0,"rgb(207, 17, 96)");
     }
 
-var stuffFour = false;
-    stuffFour = hasCollided(square1,stuff4);
-    if(stuffFour === true){
-  lives++;
-  stuff4 = new Square(0, 0, 0,0,"rgb(18, 237, 224)");
-  }
+
 
 
 if(check){
@@ -159,8 +157,7 @@ function drawSquare()
     	ctx.fillStyle = stuff3.mainColor;
     ctx.fillRect(stuff3.x, stuff3.y, stuff3.width, stuff3.height);
 
-    ctx.fillStyle = stuff4.mainColor;
-  ctx.fillRect(stuff4.x, stuff4.y, stuff4.width, stuff4.height);
+
 
 
     for(var i = 0; i < squareArray.length; i++)
