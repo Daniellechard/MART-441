@@ -29,7 +29,6 @@ function setup()
 
     //blue
     square1 = new Square(50,50,25,25,"rgb(0, 255, 232)");
-
     //pink
     stuff1 = new Square(600, 300, 10,10,"rgb(255, 0, 199)");
     //yellow
