@@ -14,27 +14,45 @@
         <script>
           var scene = new THREE.Scene();
           var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
+          camera.position.x = 0
+          camera.position.y = -0
+          camera.position.z = -50
+scene.background = new THREE.Color(0xFFE599);
            var renderer = new THREE.WebGLRenderer();
            renderer.setSize( window.innerWidth, window.innerHeight );
            document.body.appendChild( renderer.domElement );
 
-           var geometry = new THREE.BoxGeometry();
+           var geometry = new THREE.BoxGeometry(10,10,10);
+           var dodec = new THREE.DodecahedronGeometry(7);
 var material = new THREE.MeshBasicMaterial({
-    color: 0x00ff00
+    color: 0xF6B26B
+});
+var dodecMaterial = new THREE.MeshBasicMaterial({
+    color: 0x76A5AF
 });
 var cube = new THREE.Mesh(geometry, material);
+var dodec = new THREE.Mesh(dodec, dodecMaterial);
 scene.add(cube);
+scene.add(dodec);
 
-camera.position.z = 5;
 
-function animate() {
-    requestAnimationFrame( animate );
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-    renderer.render( scene, camera );
+
+var rotation = 0
+function spinCamera() {
+    rotation += 0.001
+    camera.position.z = Math.sin(rotation) * 80;
+    camera.position.x = Math.cos(rotation) * 80;
+    camera.lookAt(scene.position)
 }
-animate();
+var render = function() {
+
+    requestAnimationFrame(render);
+    spinCamera();
+
+    renderer.render(scene, camera);
+};
+
+render();
         </script>
     </body>
 </html>
