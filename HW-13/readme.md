@@ -1,1 +1,0 @@
-I couldn't manage to get any of my models to load even though I tried a couple times. Everytime I added the code to add the 3d model it broke the code for the objects and the screen just went black and I couldn't figure out why. I'm pretty happy with how it turned out though and I think it's fun and interesting that the objects intersect each other.
