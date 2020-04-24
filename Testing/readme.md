@@ -1,4 +1,0 @@
-# MART-441 hw
-https://daniellechard.github.io/MART-441/
-
-This homework was extremely hard. I tried watching various tutorials on creating your own choose your adventure games in java but none of the ones I found explained how to incorporate the DOM into it. I still don't totally understand the whole "DOM" thing but I think I am starting to get a better grasp of it the more I work with it and watch tutorials and look through other people's code. This homework took me significantly longer than I was expecting. I'm definitely going to have to start setting aside a lot more time for this class since I'm sure it only gets harder from here on out. I think taking two coding classes in one semester was probably a mistake for me just because it takes up so much of my time and I generally find it pretty frustrating. After the amount of coding classes I've taken I was hoping this would be easier but none of it seems to stick.
