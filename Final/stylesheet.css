@@ -32,7 +32,7 @@ h4 {
 
 @media (min-width: 600px) {
   .grid {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 33% 33% 33%;
   }
 }
 
@@ -52,7 +52,7 @@ h4 {
 }
 .services-grid {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 33% 33% 33%;
 }
 .branding, .graphic-design, .web-design {
   text-align: center;
@@ -61,4 +61,49 @@ h4 {
 .branding-list {
   list-style: none;
   padding: 0;
+}
+
+@media (max-width: 480px){
+    .services-grid{
+      grid-template-columns: 100%;
+    }
+
+.portfolio-heading{
+  text-align: center;
+}
+
+.portfolio-grid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.portfolio-image{
+  justify-self: center;
+  padding: 4%;
+}
+
+@media (max-width: 650px) {
+  .portfolio-grid {
+    grid-template-columns: 100%
+  }
+}
+.links-and-contact {
+  display:grid;
+  grid-template-columns: 30% 70%;
+}
+.links{
+  justify-content: center;
+}
+.links-list{
+  list-style:none;
+  padding:0;
+}
+@media (max-width: 650px) {
+  .links-and-contact {
+    grid-template-columns: 100%;
+  }
+}
+
+    }
+  }
 }
