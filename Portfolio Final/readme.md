@@ -1,0 +1,1 @@
+I had a lot of fun making this website come to life. I wanted to keep it pretty simple and straightforward and I'm pretty happy with the outcome. I look forward to playing around more with css and js in the futur to create even more complex websites.
